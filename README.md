@@ -1,6 +1,44 @@
 # blog-project
 A blog
 
+## Objective:
+Create a blog website.
+
+## Initial Set-Up:
+1) Download the starting files for Section 23: Boss Level Challenge 3 - Blog Website
+found here: 
+https://www.appbrewery.co/p/web-development-course-resources/
+2) cd into the current project folder and initialize npm using the command line interface. This will create a package.json file.
+```
+  $ npm init
+```
+
+3) Install npm in the current project folder. This will create a package-lock.json file. 
+```
+  $ npm install
+```
+
+4) Use npm to install express in the current project folder. You can check that it is installed in the package.json file under dependencies. 
+```
+  $ npm install express
+```
+
+5) Use npm to install body-parser in the current project folder.You can check that it is installed in the package.json file under dependencies. 
+```
+  $ npm install body-parser
+```
+
+6) Use npm to install ejs in the current project folder. You can check that it is installed in the package.json file under dependencies. 
+```
+  $ npm install ejs
+```
+
+7) Use npm to install loDash (a modern JavaScript utility library delivering modularity, performance & extras) in the current project folder. You can check that it is installed in the package.json file under dependencies. 
+
+```
+  $ npm install lodash
+```
+
 **Challenge 1:**
 To complete challenge 1, you should be able to head over to localhost:3000 and when you hit enter it should render the home page and it will have an h1 but just says Home.
 
@@ -120,3 +158,28 @@ use the forEach method instead of the standard FOR loop that you currently have.
 
 **Challenge 15:**
 The goal of this challenge is instead of console logging the titles or the bodies of each of the posts that we compose I want you to be able to render it on the home page.
+
+**Challenge 16:**
+Restart your server, if you are running nodemon you can type rs to restart it.
+Create a new route with parameters /posts/:postName
+
+**Challenge 17**
+Restart your server, if you are running nodemon you can type rs to restart it.
+
+go to /compose and write a post with a title Test and inside the post you can write any kind of mumbojumbo and click on the publish button. 
+
+The aim of this challenge is if we can type /posts/test spelt out exactly the same as the title of our blog post, then when I hit enter and I go over to our console I should be able to see match found.
+
+So I want you to write the code inside app.js that checks whether if this parameter value is equal to a title of a post that we've got inside our posts array. And if that's true then you're going to log match found.
+
+**Challenge 18:**
+Install loDash, which is a modern JavaScript utility library delivering modularity, performance & extras. Require loDash in your project. In the loDash documentation search for lowercase, and use the method that allows you to turn all strings into a lowercase. And if you look at the example it actually goes much further than that. It will in fact ignore all of the hyphens or the underscores and it will simply just give you a pure string to work with.
+
+_.lowerCase([string=''])
+
+## Learned
+I learned how to
+
+use route parameters
+
+use Lodash, a JavaScript utility library that makes it easier to work with JavaScript inside my Node apps.

@@ -2,6 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const https = require("https");
+
+// Challenge 18: require lodash
+const _ = require("lodash");
+
 const app = express();
 const port = 3000;
 app.listen(port, function () {
@@ -79,4 +83,30 @@ app.post("/compose", function (req, res) {
 
   // Challenge 11: redirect to the root route and inside of the root route, we're going to log all o fthe posts inside the post array.
   res.redirect("/");
+});
+
+// Challenge 16: create a get request using route parameters /posts/:postName
+// note the : in front of the postName, this creates a dynamic URL
+// console log the postName parameter using req.params() method
+app.get("/posts/:postName", function (req, res) {
+  // console.log(req.params.postName);
+  // Challenge 17: check wheather the parameter value is equal to a title of a post that we have inside our posts array.
+  // Create a constant called requestedTitle and set it equal to req.params.postName
+  // Challenge 18: convert req.params.postName into lowercase using loDash method 
+  const requestedTitle = _.lowerCase(req.params.postName);
+
+  // Challenge 17: loop through the posts array to check its title
+  // inside the function() should be the singular form of the array (function(post))
+  posts.forEach(function (post) {
+    // Challenge 17: after checking its title save it into a constant called storedTitle
+     // Challenge 18: convert post.title into lowercase using loDash method  
+    const storedTitle = _.lowerCase(post.title);
+
+    // Challenge 17: Check for each post wheather if the storedTitle matches the requestedTitle so we can use an if statment for that
+    if (storedTitle === requestedTitle) {
+      console.log("Match found!")
+    } else {
+      console.log("Not a match!")
+    }
+  });
 });
