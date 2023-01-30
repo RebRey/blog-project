@@ -18,6 +18,7 @@ h1{
 
 .navbar-brand{
 margin: .75rem 0 .75rem 0;
+color: #817d80;
 }
 
 .navbar {
@@ -30,13 +31,8 @@ margin: .75rem 0 .75rem 0;
   font-size: 12px;
   letter-spacing: 5px;
   background-color: #faf6f9;
-  color: #817d80;
-  display: flexbox;
 }
 
-.nav-link{
-  color: #817d80;
-}
 .navbar-nav li a:hover {
   color: #1abc9c !important;
 }

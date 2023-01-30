@@ -42,6 +42,7 @@ When you come across Node Express EJS apps, there are main web pages and then th
 To complete this challenge try and fix the code so that your header and footer partials still get
 
 applied.
+
 **Challenge 5:** 
 Now in this challenge in order to complete it, go into your browser and go to
 
@@ -75,3 +76,41 @@ The title input is a single line and the post input is a multi line text box
 You also need to make this publish button blue and look like this.
 
 We've got some extra labels in hand above the title and post input boxes.
+
+**Challenge 10:**
+Currently there are two inputs inside our form. One is called post body and one is called post title. 
+
+Inside our app.js we currently can console.log the post title that gets sent to our compose route through the post requests that the form initiates.
+
+So when we click the submit button we send over two pieces of data, the textarea and the input.
+
+The next challenge is instead of console logging the post body or the post title inside this callback, create a Javascript object that's simply just called post and it has to store both the title that gets passed over as well as the post body that gets passed over.
+
+**Challenge 11:**
+In this challenge put this newly created post object inside a global variable called
+
+posts, with an 's' at the end.
+
+We're going to have an array that is going to store all of these new posts but it's going to be a global variable.
+
+You need to create a new empty array that is a global variable and then you're going to add this new post object to that new array.
+
+And finally at the end of this route, you're going to redirect to the root route. And inside the root route we're going to log all of the posts inside the post array that you created.
+
+Once you've completed this, what should happen is I should be able to put in a post hit publish
+
+and then let's go back to compose again and let's put in another post and hit publish.
+
+And firstly you notice that we get directed to the root route or the home page
+
+once we've finished composing the post. And then if you take a look inside our terminal you can see that
+
+my entire array is being logged and the first time it only contained a single object, the 'Day 1 post, and the second time this array
+
+contained two Javascript objects both of my posts, 'Day 1' and 'Day 2'.
+
+**Challenge 12:** 
+Instead of console logging the posts, pass them over to the home.ejs page and console.log the posts array there.
+
+**Challenge 13:**
+Write a FOR loop inside the home.ejs page that loops through the post array and console logs each and every title, the titles of each of these posts. And to test it you should have a minimum of two posts so that you can make sure that you are indeed printing out all of the titles inside the posts array.
