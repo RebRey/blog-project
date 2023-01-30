@@ -12,15 +12,23 @@
 
 <!-- Challenge 13: Create a FOR loop using ejs snippets that loops through the entre length of the posts array -->
 <!-- <% for (let i=0; i < posts.length; i++) { %> -->
-    <!--console.log the title of the post that is stored in the posts array, remember that the word title is the key name of the javascript object called post-->
-    <!--<% console.log(posts[i].title);%> -->
-  <!--  <%}; %> -->
+<!--console.log the title of the post that is stored in the posts array, remember that the word title is the key name of the javascript object called post-->
+<!--<% console.log(posts[i].title);%> -->
+<!--  <%}; %> -->
 
 <!-- Challenge 14: use the forEach method to change the code from challenge 13 -->
-<!--  we are looping inside each of the items inside the posts array -->  
-posts.forEach(function(post){
-    <% console.log(post.title);%>
-});
+<!-- we are looping inside each of the items inside the posts array -->
+<!-- array.forEach(function(singular form of the array)) -->
+<!-- console.log(singular form of the array.value) -->
+<!-- <% posts.forEach(function(post){ %> <% console.log(post.title);%> <% }); %> -->
+
+
+<!-- Challenge 15: Render each item inside the posts on the homepage -->
+<!-- Challenge 15: use the ejs value tags around our javascript variables -->
+<% posts.forEach(function(post){ %>
+  <h1> <%= post.title %> </h1>
+  <p> <%= post.content %> </p>
+  <% }); %>
 
 <!-- Challenge 3 apply ejs footer layout -->
 <!-- Inside the views folder and create a new folder called partials, move the header and footer.ejs files inside and update the locations for footer  -->

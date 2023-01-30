@@ -117,3 +117,6 @@ Write a FOR loop inside the home.ejs page that loops through the post array and 
 
 **Challenge 14:**
 use the forEach method instead of the standard FOR loop that you currently have.
+
+**Challenge 15:**
+The goal of this challenge is instead of console logging the titles or the bodies of each of the posts that we compose I want you to be able to render it on the home page.
