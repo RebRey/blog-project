@@ -11,10 +11,17 @@
 <% console.log(posts); %>
 
 <!-- Challenge 13: Create a FOR loop using ejs snippets that loops through the entre length of the posts array -->
-<% for (let i=0; i < posts.length; i++) { %>
+<!-- <% for (let i=0; i < posts.length; i++) { %> -->
     <!--console.log the title of the post that is stored in the posts array, remember that the word title is the key name of the javascript object called post-->
-    <% console.log(posts[i].title);%>
-    <%}; %>
+    <!--<% console.log(posts[i].title);%> -->
+  <!--  <%}; %> -->
+
+<!-- Challenge 14: use the forEach method to change the code from challenge 13 -->
+<!--  we are looping inside each of the items inside the posts array -->  
+posts.forEach(function(post){
+    <% console.log(post.title);%>
+});
+
 <!-- Challenge 3 apply ejs footer layout -->
 <!-- Inside the views folder and create a new folder called partials, move the header and footer.ejs files inside and update the locations for footer  -->
 <%- include("partials/footer"); -%>

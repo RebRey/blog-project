@@ -114,3 +114,6 @@ Instead of console logging the posts, pass them over to the home.ejs page and co
 
 **Challenge 13:**
 Write a FOR loop inside the home.ejs page that loops through the post array and console logs each and every title, the titles of each of these posts. And to test it you should have a minimum of two posts so that you can make sure that you are indeed printing out all of the titles inside the posts array.
+
+**Challenge 14:**
+use the forEach method instead of the standard FOR loop that you currently have.
