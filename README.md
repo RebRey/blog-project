@@ -175,7 +175,23 @@ So I want you to write the code inside app.js that checks whether if this parame
 **Challenge 18:**
 Install loDash, which is a modern JavaScript utility library delivering modularity, performance & extras. Require loDash in your project. In the loDash documentation search for lowercase, and use the method that allows you to turn all strings into a lowercase. And if you look at the example it actually goes much further than that. It will in fact ignore all of the hyphens or the underscores and it will simply just give you a pure string to work with.
 
-_.lowerCase([string=''])
+**Challenge 19:**
+Instead of console logging whether a title is matched or not match, we actually want to render the actual page so that if we have a post say called another post inside our home page we should be able to head over to /posts/another-post.
+
+And the goal of this challenge is that when I hit enter we should now get taken to a brand new page that's been rendered using EJS and it's a standalone page that just contains the contents of that particular blog post.
+
+**Challenge 20:**
+The goal of this challenge is to use Google and use Stack Overflow and use all the resources you have on the internet to figure out how you can change the code so that our home page now truncates the content of each blog posts to only 100 characters. And then at the end there's just these three ... and now we only have a preview of each blog post.
+
+**Challenge 21:**
+The goal of this challenge is when you load up the home page it should have a link at the end of each truncated blog post with something that says Read more. And when we click on it then it should take us to the actual page of the blog post including all of the content.
+
+Solution: 
+We know that inside home.ejs we already have access to the post's title for each and every post on the home page.
+
+We also know that we've set up our routes so that if we say posts/ and we simply put in the name all the titles, so say Day 1 with a space in between will look like this /posts/day-1
+That means that our href can simply be /posts/EJS tag so we end up with this  in the href /posts/<%= post.title %>
+
 
 ## Learned
 I learned how to
@@ -183,3 +199,9 @@ I learned how to
 use route parameters
 
 use Lodash, a JavaScript utility library that makes it easier to work with JavaScript inside my Node apps.
+
+used _.lowerCase() loDash method that converts string, as space separated words, to lower case.
+
+## Methods
+* substring() JavaScript method that returns the part of the string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
+

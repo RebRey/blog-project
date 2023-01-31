@@ -22,13 +22,18 @@
 <!-- console.log(singular form of the array.value) -->
 <!-- <% posts.forEach(function(post){ %> <% console.log(post.title);%> <% }); %> -->
 
-
 <!-- Challenge 15: Render each item inside the posts on the homepage -->
 <!-- Challenge 15: use the ejs value tags around our javascript variables -->
 <% posts.forEach(function(post){ %>
-  <h1> <%= post.title %> </h1>
-  <p> <%= post.content %> </p>
-  <% }); %>
+<h1><%= post.title %></h1>
+
+<!-- Challenge 20: the home page now truncates the content of each blog posts to only 100 characters use substring() method  -->
+<p><%= post.content.substring(0, 100) + " ..." %>
+<!-- Challenge 21: add an anchor tag that says Read More, the href should link to the complete post from the posts.ejs page -->
+<!-- post.title -->
+<a href="/posts/<%= post.kebabCaseTitle %>">Read more</a>
+</p>
+<% }); %>
 
 <!-- Challenge 3 apply ejs footer layout -->
 <!-- Inside the views folder and create a new folder called partials, move the header and footer.ejs files inside and update the locations for footer  -->

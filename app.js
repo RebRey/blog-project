@@ -75,6 +75,8 @@ app.post("/compose", function (req, res) {
   // req.body object stores input from the client (browser) and sends it to your Express server.
   const post = {
     title: req.body.postTitle,
+    // convert the title into kebabcase to keep it shorter with - instead of %20
+    kebabCaseTitle: _.kebabCase(req.body.postTitle),
     content: req.body.postBody,
   };
   // Challenge 11: add the post object into the new array by using the .push() method
@@ -103,10 +105,20 @@ app.get("/posts/:postName", function (req, res) {
     const storedTitle = _.lowerCase(post.title);
 
     // Challenge 17: Check for each post wheather if the storedTitle matches the requestedTitle so we can use an if statment for that
+    // if (storedTitle === requestedTitle) {
+    //   console.log("Match found!")
+    // } else {
+    //   console.log("Not a match!")
+    // }
+
+    // Challenge 19: 
     if (storedTitle === requestedTitle) {
-      console.log("Match found!")
-    } else {
-      console.log("Not a match!")
+      // Challenge 19: create a javascript object with two key-value pairs. the key is the name and the values are the ejs tag names we want to render on the page
+      res.render("post", {
+        title: post.title,
+        content: post.content
+      })
     }
   });
 });
+
