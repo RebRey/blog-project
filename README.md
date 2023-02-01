@@ -39,6 +39,22 @@ https://www.appbrewery.co/p/web-development-course-resources/
   $ npm install lodash
 ```
 
+7) Install MongoDB Community Server from: 
+https://www.mongodb.com/try/download/community
+
+Follow the Installation manual from: 
+https://www.mongodb.com/docs/v6.0/tutorial/install-mongodb-on-os-x-tarball/
+
+STEP 1: Download the tarball
+STEP 2: Exact the files from the downloaded archive
+STEP 3: Ensure the binaries are in a directory listed in your PATH environment variable.
+* Open a new CLI (terminal on Mac)
+
+Moving the MongoDB folder into /usr/local (used by the system administrator when installing software locally)
+put stuff that you manage here
+
+ sudo mv /Users/rebecca/Downloads/mongodb-macos-x86_64-6.0.4 /usr/local/mongodb
+
 **Challenge 1:**
 To complete challenge 1, you should be able to head over to localhost:3000 and when you hit enter it should render the home page and it will have an h1 but just says Home.
 
