@@ -10,36 +10,36 @@ found here:
 https://www.appbrewery.co/p/web-development-course-resources/
 2) cd into the current project folder and initialize npm using the command line interface. This will create a package.json file.
 ```
-  $ npm init
+  npm init
 ```
 
 3) Install npm in the current project folder. This will create a package-lock.json file. 
 ```
-  $ npm install
+  npm install
 ```
 
 4) Use npm to install express in the current project folder. You can check that it is installed in the package.json file under dependencies. 
 ```
-  $ npm install express
+  npm install express
 ```
 
 5) Use npm to install body-parser in the current project folder.You can check that it is installed in the package.json file under dependencies. 
 ```
-  $ npm install body-parser
+  npm install body-parser
 ```
 
 6) Use npm to install ejs in the current project folder. You can check that it is installed in the package.json file under dependencies. 
 ```
-  $ npm install ejs
+  npm install ejs
 ```
 
 7) Use npm to install loDash (a modern JavaScript utility library delivering modularity, performance & extras) in the current project folder. You can check that it is installed in the package.json file under dependencies. 
 
 ```
-  $ npm install lodash
+  npm install lodash
 ```
 
-7) Install MongoDB Community Server from: 
+## Install MongoDB
 https://www.mongodb.com/try/download/community
 
 Follow the Installation manual from: 
@@ -50,11 +50,94 @@ STEP 2: Exact the files from the downloaded archive
 STEP 3: Ensure the binaries are in a directory listed in your PATH environment variable.
 * Open a new CLI (terminal on Mac)
 
-Moving the MongoDB folder into /usr/local (used by the system administrator when installing software locally)
+*  Moving the MongoDB folder into /usr/local (used by the system administrator when installing software locally)
 put stuff that you manage here
-
+```
  sudo mv /Users/rebecca/Downloads/mongodb-macos-x86_64-6.0.4 /usr/local/mongodb
+```
+ Check if the folder was successfully moved to the local folder:
+```
+open /usr/local/ 
+```
 
+* The usr folder is normally hidden, it is easier to use the CLI to access its contents. 
+
+* Add MongoDB binaries to environment variables. 
+* This tells our Mac when it starts up what is the file path to access MongoDB.
+
+Go to home folder
+```
+cd ~
+```
+
+* Create a new file called .zshrc
+```
+touch .zshrc
+```
+* Check if the .zshrc file was created successfully inside the list of hidden files
+```
+ls -a
+```
+*edit the .zshrc folder by using an editor on the CLI called vim.
+```
+vim .zshrc
+```
+
+* vim does not have a GUI with buttons, it works with commands. While using vim get into insert mode hit i. 
+
+* type the following command: 
+```
+export PATH=$PATH:/usr/local/mongodb/bin 
+```
+* Exit INSERT MODE by hitting the esc key. 
+
+* Save your edits by typing the following command and hit enter when done. This will also quit vim.
+```
+:wq
+```
+ 
+
+9) Run MongoDB Community Edition:
+
+STEP 1: Create a data directory before you start MongoDB for the first time. Create db folder inside the mongodb folder.
+```
+mkdir -p /usr/local/mongodb/db
+```
+
+* check to see if the db folder was successfully created:
+```
+open /usr/local/mongodb/db
+```
+
+PROTIP: MacOS has since changed root level directory permissions. 
+You can no longer create directories in the root directory. 
+
+STEP 2: Set permissions for the data directory. 
+
+sudo chown "username" "directory path you want to own"
+
+```
+sudo chown rebecca /usr/local/mongodb/db
+```
+
+STEP 3) Check if mongodb was installed correctly by typing the following command:
+```
+mongos --version
+```
+
+*You might get a system error about security and trusting software from unsigned developers. Go to System Settings -> Privacy & Security and grant permissions to "mongos"
+
+try typing the following command again:
+
+```
+mongos --version
+```
+
+*mac might ask you again if you are sure you want to open "mangos" grant permission by clicking yes.
+
+
+
+## Challenges
 **Challenge 1:**
 To complete challenge 1, you should be able to head over to localhost:3000 and when you hit enter it should render the home page and it will have an h1 but just says Home.
 
