@@ -135,6 +135,24 @@ mongos --version
 
 *mac might ask you again if you are sure you want to open "mangos" grant permission by clicking yes.
 
+STEP 4) Start mongodb database server. Type the following command:
+
+```
+mongod --dbpath /usr/local/mongodb/db
+```
+
+*Anytime you close this terminal you will need to type this command to run the mongodb database server again.
+
+STEP 6) MongoDB Shell Download
+MongoDB Shell is the quickest way to connect to (and work with) MongoDB. Download and extract the files.
+
+Open the folder and click on bin, drop the two files inside (mongosh and mongosh_crypt_v1.dylib) into /usr/local/mongodb/bin folder.
+
+STEP 5) Open a new tab in the terminal by hitting the command t keys or shell > new tab.
+* type the following command: 
+```
+mongosh
+```
 
 
 ## Challenges
