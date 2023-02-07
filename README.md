@@ -322,3 +322,5 @@ used _.lowerCase() loDash method that converts string, as space separated words,
 ## Methods
 * substring() JavaScript method that returns the part of the string from the start index up to and excluding the end index, or to the end of the string if no end index is supplied.
 
+
+
